@@ -1,0 +1,391 @@
+{
+ "annotations": {
+   "list": [
+     {
+       "builtIn": 1,
+       "datasource": "-- Grafana --",
+       "enable": true,
+       "hide": true,
+       "iconColor": "rgba(0, 211, 255, 1)",
+       "name": "Annotations & Alerts",
+       "target": {
+         "limit": 100,
+         "matchAny": false,
+         "tags": [],
+         "type": "dashboard"
+       },
+       "type": "dashboard"
+     }
+   ]
+ },
+ "editable": true,
+ "fiscalYearStartMonth": 0,
+ "graphTooltip": 0,
+ "id": 1,
+ "links": [],
+ "liveNow": false,
+ "panels": [
+   {
+     "aliasColors": {},
+     "bars": false,
+     "dashLength": 10,
+     "dashes": false,
+     "fieldConfig": {
+       "defaults": {
+         "unit": "bytes"
+       },
+       "overrides": []
+     },
+     "fill": 1,
+     "fillGradient": 0,
+     "gridPos": {
+       "h": 8,
+       "w": 11,
+       "x": 0,
+       "y": 0
+     },
+     "hiddenSeries": false,
+     "id": 8,
+     "legend": {
+       "avg": false,
+       "current": false,
+       "max": false,
+       "min": false,
+       "show": true,
+       "total": false,
+       "values": false
+     },
+     "lines": true,
+     "linewidth": 1,
+     "nullPointMode": "null",
+     "options": {
+       "alertThreshold": true
+     },
+     "percentage": false,
+     "pluginVersion": "8.3.3",
+     "pointradius": 2,
+     "points": false,
+     "renderer": "flot",
+     "seriesOverrides": [],
+     "spaceLength": 10,
+     "stack": false,
+     "steppedLine": false,
+     "targets": [
+       {
+         "expr": "sum by(device) (node_filesystem_avail_bytes{fstype!=\"tmpfs\"})",
+         "interval": "",
+         "legendFormat": "",
+         "refId": "A"
+       }
+     ],
+     "thresholds": [],
+     "timeRegions": [],
+     "title": "Disk Free ",
+     "tooltip": {
+       "shared": true,
+       "sort": 0,
+       "value_type": "individual"
+     },
+     "type": "graph",
+     "xaxis": {
+       "mode": "time",
+       "show": true,
+       "values": []
+     },
+     "yaxes": [
+       {
+         "$$hashKey": "object:1165",
+         "format": "bytes",
+         "logBase": 1,
+         "show": true
+       },
+       {
+         "$$hashKey": "object:1166",
+         "format": "short",
+         "logBase": 1,
+         "show": true
+       }
+     ],
+     "yaxis": {
+       "align": false
+     }
+   },
+   {
+     "aliasColors": {},
+     "bars": false,
+     "dashLength": 10,
+     "dashes": false,
+     "fieldConfig": {
+       "defaults": {
+         "unit": "bytes"
+       },
+       "overrides": []
+     },
+     "fill": 1,
+     "fillGradient": 0,
+     "gridPos": {
+       "h": 8,
+       "w": 12,
+       "x": 11,
+       "y": 0
+     },
+     "hiddenSeries": false,
+     "id": 6,
+     "legend": {
+       "avg": false,
+       "current": false,
+       "max": false,
+       "min": false,
+       "show": true,
+       "total": false,
+       "values": false
+     },
+     "lines": true,
+     "linewidth": 1,
+     "nullPointMode": "null",
+     "options": {
+       "alertThreshold": true
+     },
+     "percentage": false,
+     "pluginVersion": "8.3.3",
+     "pointradius": 2,
+     "points": false,
+     "renderer": "flot",
+     "seriesOverrides": [],
+     "spaceLength": 10,
+     "stack": false,
+     "steppedLine": false,
+     "targets": [
+       {
+         "exemplar": false,
+         "expr": "node_memory_MemFree_bytes{job='nodeexporter'}",
+         "instant": false,
+         "interval": "",
+         "legendFormat": "",
+         "refId": "A"
+       }
+     ],
+     "thresholds": [],
+     "timeRegions": [],
+     "title": "memory free",
+     "tooltip": {
+       "shared": true,
+       "sort": 0,
+       "value_type": "individual"
+     },
+     "type": "graph",
+     "xaxis": {
+       "mode": "time",
+       "show": true,
+       "values": []
+     },
+     "yaxes": [
+       {
+         "$$hashKey": "object:909",
+         "format": "bytes",
+         "logBase": 1,
+         "show": true
+       },
+       {
+         "$$hashKey": "object:910",
+         "format": "short",
+         "logBase": 1,
+         "show": true
+       }
+     ],
+     "yaxis": {
+       "align": false
+     }
+   },
+   {
+     "fieldConfig": {
+       "defaults": {
+         "color": {
+           "mode": "palette-classic"
+         },
+         "custom": {
+           "axisLabel": "",
+           "axisPlacement": "auto",
+           "barAlignment": 0,
+           "drawStyle": "line",
+           "fillOpacity": 0,
+           "gradientMode": "none",
+           "hideFrom": {
+             "legend": false,
+             "tooltip": false,
+             "viz": false
+           },
+           "lineInterpolation": "linear",
+           "lineWidth": 1,
+           "pointSize": 5,
+           "scaleDistribution": {
+             "type": "linear"
+           },
+           "showPoints": "auto",
+           "spanNulls": false,
+           "stacking": {
+             "group": "A",
+             "mode": "none"
+           },
+           "thresholdsStyle": {
+             "mode": "off"
+           }
+         },
+         "mappings": [],
+         "thresholds": {
+           "mode": "absolute",
+           "steps": [
+             {
+               "color": "green"
+             },
+             {
+               "color": "red",
+               "value": 80
+             }
+           ]
+         },
+         "unit": "percentunit"
+       },
+       "overrides": []
+     },
+     "gridPos": {
+       "h": 9,
+       "w": 11,
+       "x": 0,
+       "y": 8
+     },
+     "id": 4,
+     "options": {
+       "legend": {
+         "calcs": [],
+         "displayMode": "list",
+         "placement": "bottom"
+       },
+       "tooltip": {
+         "mode": "single"
+       }
+     },
+     "pluginVersion": "8.3.3",
+     "targets": [
+       {
+         "expr": "node_load1{job=\"nodeexporter\"}",
+         "interval": "",
+         "legendFormat": "",
+         "refId": "A"
+       },
+       {
+         "expr": "node_load5{job=\"nodeexporter\"}\n",
+         "hide": false,
+         "interval": "",
+         "legendFormat": "",
+         "refId": "B"
+       },
+       {
+         "expr": "node_load15{job=\"nodeexporter\"}",
+         "hide": false,
+         "interval": "",
+         "legendFormat": "",
+         "refId": "C"
+       }
+     ],
+     "title": "CPULA 1/5/15",
+     "type": "timeseries"
+   },
+   {
+     "aliasColors": {},
+     "bars": false,
+     "dashLength": 10,
+     "dashes": false,
+     "fill": 1,
+     "fillGradient": 0,
+     "gridPos": {
+       "h": 9,
+       "w": 12,
+       "x": 11,
+       "y": 8
+     },
+     "hiddenSeries": false,
+     "id": 2,
+     "legend": {
+       "avg": false,
+       "current": false,
+       "max": false,
+       "min": false,
+       "show": true,
+       "total": false,
+       "values": false
+     },
+     "lines": true,
+     "linewidth": 1,
+     "nullPointMode": "null",
+     "options": {
+       "alertThreshold": true
+     },
+     "percentage": false,
+     "pluginVersion": "8.3.3",
+     "pointradius": 2,
+     "points": false,
+     "renderer": "flot",
+     "seriesOverrides": [],
+     "spaceLength": 10,
+     "stack": false,
+     "steppedLine": false,
+     "targets": [
+       {
+         "expr": "avg without (cpu)(irate(node_cpu_seconds_total{job=\"nodeexporter\",mode=\"idle\"}[1m])) * 100",
+         "interval": "",
+         "legendFormat": "",
+         "refId": "A"
+       }
+     ],
+     "thresholds": [],
+     "timeRegions": [],
+     "title": "утилизация CPU для nodeexporter",
+     "tooltip": {
+       "shared": true,
+       "sort": 0,
+       "value_type": "individual"
+     },
+     "type": "graph",
+     "xaxis": {
+       "mode": "time",
+       "show": true,
+       "values": []
+     },
+     "yaxes": [
+       {
+         "$$hashKey": "object:67",
+         "format": "short",
+         "logBase": 1,
+         "show": true
+       },
+       {
+         "$$hashKey": "object:68",
+         "format": "short",
+         "logBase": 1,
+         "show": true
+       }
+     ],
+     "yaxis": {
+       "align": false
+     }
+   }
+ ],
+ "refresh": "",
+ "schemaVersion": 34,
+ "style": "dark",
+ "tags": [],
+ "templating": {
+   "list": []
+ },
+ "time": {
+   "from": "now-15m",
+   "to": "now"
+ },
+ "timepicker": {},
+ "timezone": "",
+ "title": "New dashboard Copy",
+ "uid": "2TQCegTSk",
+ "version": 4,
+ "weekStart": ""
+}
