@@ -17,6 +17,8 @@
 
 В решении приведите скриншоты тестовых событий из каналов нотификаций.
 
+---
+
 ### Обязательные задания
 
 ### Задание 1
@@ -29,7 +31,9 @@
 
 4. Решение домашнего задания — скриншот веб-интерфейса grafana со списком подключенных Datasource.
 
-![monitoring]()
+![monitoring](https://github.com/12sergey12/10.3_Grafana/blob/main/images/10.3-1.png)
+
+---
 
 ## Задание 2
 
@@ -61,7 +65,7 @@ sum by(device) (node_filesystem_avail_bytes{fstype!="tmpfs"})
 ```
 Для решения этого задания приведите promql-запросы для выдачи этих метрик, а также скриншот получившейся Dashboard.
 
-![monitoring]()
+![monitoring](https://github.com/12sergey12/10.3_Grafana/blob/main/images/10.3-3.png)
 
 ---
 
@@ -71,7 +75,9 @@ sum by(device) (node_filesystem_avail_bytes{fstype!="tmpfs"})
 
 2. В качестве решения задания приведите скриншот вашей итоговой Dashboard.
 
-![monitoring]()
+![monitoring](https://github.com/12sergey12/10.3_Grafana/blob/main/images/10.3-333.png)
+
+![monitoring](https://github.com/12sergey12/10.3_Grafana/blob/main/images/10.3-33.png)
 
 ---
 
@@ -81,7 +87,7 @@ sum by(device) (node_filesystem_avail_bytes{fstype!="tmpfs"})
 
 2. В качестве решения задания приведите листинг этого файла.
 
-[Dashboard_Export.json]()
+[Dashboard_Export.json](https://github.com/12sergey12/10.3_Grafana/blob/main/Dashboard_Export.json)
 
 ---
 
